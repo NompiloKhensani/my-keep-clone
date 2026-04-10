@@ -79,6 +79,7 @@
   font-size: 14px;
   padding: 0 24px;
   border-radius: 5px;
+  color: black;
 }
 .close-btn:hover {
   background-color: rgba(0, 0, 0, 0.08);

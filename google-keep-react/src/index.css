@@ -7,8 +7,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html,
 body {
   overflow-x: hidden;
+  height: 100%;
 }
 
 
@@ -115,7 +117,6 @@ body {
 .dark {
   background-color: #202124;
   color: #e8eaed;
-  min-height: 100vh;
 }
 
 /* Navbar */
