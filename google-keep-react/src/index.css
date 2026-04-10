@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* HOVER EFFECTS  */
+.material-symbols-outlined {
+  padding: 10px;
+}
+
+.hover:hover {
+  background: #f1f3f4;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline;
+}
+
+.tooltip-text {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  font-size: 0.78rem;
+  background-color: #323232;
+  color: white;
+  opacity: 0.8;
+  padding: 5px;
+  white-space: nowrap;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+/* CONTENT AREA - offset from fixed 80px sidebar */
+.content-area {
+  margin-left: 80px;
+}
+
+/* COLOR PICKER */
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 10px;
+  gap: 6px;
+}
+
+.color-swatch-tooltip {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.color-swatch-tooltip .tooltip-text {
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: transform 0.1s, border-color 0.1s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.12);
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+.color-swatch.selected {
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Colored form in dark mode — match note-colored text behavior */
+.dark .form-container.form-colored .note-title,
+.dark .form-container.form-colored .note-text {
+  color: #202124;
+}
+.dark .form-container.form-colored .note-title::placeholder,
+.dark .form-container.form-colored .note-text::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+.dark .form-container.form-colored .close-btn {
+  color: #202124;
+}
+.dark .form-container.form-colored .small-icon {
+  color: #202124;
+}
+
+/* ===== DARK MODE ===== */
+.dark {
+  background-color: #202124;
+  color: #e8eaed;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.dark nav {
+  background-color: #202124;
+  border-bottom-color: #5f6368;
+  color: #e8eaed;
+}
+.dark .logo-text {
+  color: #e8eaed;
+}
+.dark .search-area {
+  background: #3c3f43;
+}
+.dark .search-area input {
+  background: #3c3f43;
+  color: #e8eaed;
+}
+.dark .search-area input::placeholder {
+  color: #9aa0a6;
+}
+.dark .hover:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Sidebar */
+.dark .sidebar {
+  background-color: #202124;
+  color: #e8eaed;
+}
+.dark .sidebar-hover {
+  background: #2d2e31;
+}
+.dark .sidebar-item .sidebar-text {
+  color: #e8eaed;
+}
+.dark .sidebar-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.dark .sidebar-active-item {
+  background-color: #41331d;
+}
+.dark .sidebar-active-item:hover {
+  background-color: #41331d;
+}
+
+/* Form */
+.dark .form-container {
+  background: #202124;
+  border-color: #5f6368;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4);
+}
+.dark .note-title,
+.dark .note-text {
+  color: #e8eaed;
+}
+.dark .note-title::placeholder,
+.dark .note-text::placeholder {
+  color: #9aa0a6;
+}
+.dark .close-btn {
+  color: #e8eaed;
+}
+.dark .small-icon {
+  color: #e8eaed;
+}
+
+/* Notes */
+.dark .note {
+  background-color: #202124;
+  border-color: #5f6368;
+}
+.dark .note .title,
+.dark .note .text {
+  color: #e8eaed;
+}
+/* Colored notes in dark mode get dark text so they stay legible */
+.dark .note.note-colored .title,
+.dark .note.note-colored .text {
+  color: #202124;
+}
+.dark .note.note-colored .note-footer .material-symbols-outlined {
+  color: #202124;
+}
+.dark .note:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4);
+}
+.dark .note-footer .material-symbols-outlined {
+  color: #e8eaed;
+}
+.dark .note-footer .material-symbols-outlined:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Empty state */
+.dark .empty-notes .empty-lightbulb {
+  color: #5f6368;
+}
+.dark .empty-notes p {
+  color: #9aa0a6;
+}
+
+/* Color swatches in dark */
+.dark .color-swatch {
+  border-color: rgba(255,255,255,0.2);
+}
+.dark .color-swatch:hover {
+  border-color: rgba(255,255,255,0.5);
+}
+.dark .color-swatch.selected {
+  border-color: rgba(255,255,255,0.8);
+}
+
+/* Modal overlay */
+.dark .modal {
+  background-color: rgba(0,0,0,0.7);
+}

@@ -1,0 +1,121 @@
+/* NAVBAR STYLES  */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  border-bottom: 1px solid #dadce0;
+  padding: 8px;
+  margin: 0 10px;
+  color: #5f6368;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo-area img {
+  margin: 0 4px;
+}
+.logo-text {
+  font-size: 22px;
+  padding-left: 4px;
+}
+
+.search-area {
+  background: #F0F4F9;
+  flex: 1;
+  max-width: 692px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.search-area input {
+  border: none;
+  background: #F0F4F9;
+  width: 95%;
+  height: 100%;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+input:focus {
+  outline: none;
+}
+
+.search-area span {
+  margin-left: 10px;
+}
+
+.search-icon-mobile {
+  display: none;
+}
+
+/* RESPONSIVE NAVBAR */
+@media (max-width: 794px) {
+  nav {
+    height: 48px;
+    padding: 4px 8px;
+    margin: 0;
+    flex-wrap: nowrap;
+  }
+  .search-area {
+    display: none;
+  }
+  .search-icon-mobile {
+    display: inline !important;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  /* Show search as icon in settings area */
+  .settings-area,
+  .profile-actions-area {
+    display: flex;
+    align-items: center;
+  }
+  .profile-actions-area .tooltip:first-child {
+    display: none;
+  }
+  .settings-area .tooltip:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    height: 44px;
+    padding: 2px 4px;
+    margin: 0;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .logo-area img {
+    width: 28px !important;
+    height: 28px !important;
+    margin: 0 2px;
+  }
+  .logo-text {
+    font-size: 16px;
+    padding-left: 2px;
+  }
+  .logo-area .material-symbols-outlined,
+  .settings-area .material-symbols-outlined,
+  .profile-actions-area .material-symbols-outlined {
+    padding: 6px;
+    font-size: 20px;
+  }
+  .settings-area .tooltip:nth-child(2) {
+    display: none;
+  }
+  .profile-actions-area .tooltip:first-child {
+    display: none;
+  }
+}
